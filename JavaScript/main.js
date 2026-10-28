@@ -3,7 +3,7 @@
 var searchedCityName;
 var refresh = true;
 var mainTimezone = 0;
-sessionStorage.setItem("lasBackgroundImage", "url(/IMG/Back/8-Clear/Day/Clear_day_6.jpg)");
+sessionStorage.setItem("lasBackgroundImage", "url(/IMG/Back/8-Clear/Day/Clear_day_6.avif)");
 const API_BASE = "https://weather-proxy.pluma-weather.workers.dev";
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -1043,7 +1043,7 @@ if (sessionStorage.getItem("sessionClicks") == 0) {
     // Works if refresed from IDE
     document.getElementById("userInputCity").value = sessionStorage.getItem("lastSearched");
     document.getElementById("searchBtnDiv2").click();
-    document.getElementById("mainBody").style.backgroundImage = "url(/IMG/Back/8-Clear/Day/Clear_day_6.jpg)";};
+    document.getElementById("mainBody").style.backgroundImage = "url(/IMG/Back/8-Clear/Day/Clear_day_6.avif)";};
 
 
 // "Enter" key works if number of searches is ok
@@ -1429,125 +1429,125 @@ const clouds_WebDesc_to_WebIcon_night = {
 ///////////////////////////////////////////////////////////////////////////////////////
 const ThunderPhotos = {
     "Day" : [
-        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_1.jpg", "Raychel Sanner", "https://unsplash.com/photos/gray-asphalt-road-under-gray-clouds-A0VVcAvPd3A"],
-        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_2.jpg", "Péter Kövesi", "https://unsplash.com/photos/a-large-field-of-grass-under-a-cloudy-sky-Pxp8S3gcWZI"],
-        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_3.jpg", "Dave Hoefler", "https://unsplash.com/photos/a-field-with-a-dirt-path-leading-to-a-storm-cloud-o-W2CCE2dME"],
-        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_4.jpg", "Will Cook", "https://unsplash.com/photos/a-large-body-of-water-under-a-cloudy-sky-uwNmeFLqSMM"]],
+        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_1.avif", "Raychel Sanner", "https://unsplash.com/photos/gray-asphalt-road-under-gray-clouds-A0VVcAvPd3A"],
+        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_2.avif", "Péter Kövesi", "https://unsplash.com/photos/a-large-field-of-grass-under-a-cloudy-sky-Pxp8S3gcWZI"],
+        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_3.avif", "Dave Hoefler", "https://unsplash.com/photos/a-field-with-a-dirt-path-leading-to-a-storm-cloud-o-W2CCE2dME"],
+        ["/IMG/Back/2-Thunderstorm/Day/Thunder_day_4.avif", "Will Cook", "https://unsplash.com/photos/a-large-body-of-water-under-a-cloudy-sky-uwNmeFLqSMM"]],
     "Night" : [
-        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_1.jpg", "Jakub Pabis", "https://unsplash.com/photos/a-large-cloud-with-a-lightning-bolt-in-the-sky-sQfb6Dm1geU"],
-        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_2.jpg", "NOAA", "https://unsplash.com/photos/lighting-in-sky-during-nighttime-0ETSZYPjvDo"],
-        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_3.jpg", "Melanie Magdalena", "https://unsplash.com/photos/thunderstorms-on-cloudy-sky-C1wAQm_lQKM"],
-        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_4.jpg", "", ""]]};
+        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_1.avif", "Jakub Pabis", "https://unsplash.com/photos/a-large-cloud-with-a-lightning-bolt-in-the-sky-sQfb6Dm1geU"],
+        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_2.avif", "NOAA", "https://unsplash.com/photos/lighting-in-sky-during-nighttime-0ETSZYPjvDo"],
+        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_3.avif", "Melanie Magdalena", "https://unsplash.com/photos/thunderstorms-on-cloudy-sky-C1wAQm_lQKM"],
+        ["/IMG/Back/2-Thunderstorm/Night/Thunder_night_4.avif", "", ""]]};
 
 
 // Drizzle background photos - location / author / link
 ///////////////////////////////////////////////////////////////////////////////////////
 const DrizzlePhotos = {
     "Day" : [
-        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_1.jpg", "Ikbal Kamaluddin", "https://unsplash.com/photos/a-close-up-of-grass-with-water-drops-on-it-2TA2uyPMKHQ"],
-        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_2.jpg", "Rapha Wilde", "https://unsplash.com/photos/water-droplets-on-a-leaf-2nuQutPmapk"],
-        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_3.jpg", "Ingo Doerrie", "https://unsplash.com/photos/water-drops-on-green-grasses-gIKXWHpQxgU"],
-        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_4.jpg", "Roman Synkevych", "https://unsplash.com/photos/low-angle-photography-of-green-grass-qPvBmSvmohs"]],
+        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_1.avif", "Ikbal Kamaluddin", "https://unsplash.com/photos/a-close-up-of-grass-with-water-drops-on-it-2TA2uyPMKHQ"],
+        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_2.avif", "Rapha Wilde", "https://unsplash.com/photos/water-droplets-on-a-leaf-2nuQutPmapk"],
+        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_3.avif", "Ingo Doerrie", "https://unsplash.com/photos/water-drops-on-green-grasses-gIKXWHpQxgU"],
+        ["/IMG/Back/3-Drizzle/Day/Drizzle_day_4.avif", "Roman Synkevych", "https://unsplash.com/photos/low-angle-photography-of-green-grass-qPvBmSvmohs"]],
     "Night" : [
-        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_1.jpg", "Chelariu Adrian", "https://unsplash.com/photos/a-drop-of-water-on-a-blade-of-grass-Xm6KQjxOCu8"],
-        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_2.jpg", "Marvin Zettl", "https://unsplash.com/photos/a-green-plant-with-water-droplets-on-it-9Dm00kaeo6Y"],
-        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_3.jpg", "Stefan Weiß", "https://unsplash.com/photos/green-trees-with-white-light-4R7Lj4nP9Is"],
-        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_4.jpg", "Joel Lee", "https://unsplash.com/photos/rain-drops-on-the-window-of-a-car-at-night-7-AS7MMcSkg"],
-        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_5.jpg", "", ""],
-        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_6.jpg", "Yu Xiao", "https://unsplash.com/photos/a-close-up-of-a-green-plant-with-water-droplets-on-it-lefMcIsNuO0"]]};
+        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_1.avif", "Chelariu Adrian", "https://unsplash.com/photos/a-drop-of-water-on-a-blade-of-grass-Xm6KQjxOCu8"],
+        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_2.avif", "Marvin Zettl", "https://unsplash.com/photos/a-green-plant-with-water-droplets-on-it-9Dm00kaeo6Y"],
+        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_3.avif", "Stefan Weiß", "https://unsplash.com/photos/green-trees-with-white-light-4R7Lj4nP9Is"],
+        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_4.avif", "Joel Lee", "https://unsplash.com/photos/rain-drops-on-the-window-of-a-car-at-night-7-AS7MMcSkg"],
+        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_5.avif", "", ""],
+        ["/IMG/Back/3-Drizzle/Night/Drizzle_night_6.avif", "Yu Xiao", "https://unsplash.com/photos/a-close-up-of-a-green-plant-with-water-droplets-on-it-lefMcIsNuO0"]]};
 
 
 // Rain background photos - location / author / link
 ///////////////////////////////////////////////////////////////////////////////////////
 const RainPhotos = {
     "Day" : [
-        ["/IMG/Back/5-Rain/Day/Rain_day_2.jpg", "Foad Roshan", "https://unsplash.com/photos/water-droplets-on-glass-panel-jrp-tFVFn0s"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_3.jpg", "Noah Silliman", "https://unsplash.com/photos/water-drops-on-glass-i2J9jnvaAbU"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_4.jpg", "Mihály Köles", "https://unsplash.com/photos/green-grass-field-during-daytime-Pr74utIXahM"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_5.jpg", "J F", "https://unsplash.com/photos/a-view-of-a-mountain-range-from-a-distance-sb8jpOmJX1s"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_6.jpg", "Kristaps Grundsteins", "https://unsplash.com/photos/a-view-of-a-road-through-a-rain-covered-window-fAY23t1iA40"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_7.jpg", "Alex Sukhanov", "https://unsplash.com/photos/green-grass-field-on-mountain-under-blue-sky-during-daytime-CqJUTrkLkr4"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_8.jpg", "Shutter Verse", "https://unsplash.com/photos/a-rain-soaked-window-with-trees-in-the-background-AuTZAjMj6Lg"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_9.jpg", "Behnam Mohsenzadeh", "https://unsplash.com/photos/a-green-hilly-landscape-Yj4BMY6wxJU"],
-        ["/IMG/Back/5-Rain/Day/Rain_day_10.jpg", "Nikolay Werner", "https://unsplash.com/photos/a-grassy-hill-with-a-road-jzAW8nffnCI"]],
+        ["/IMG/Back/5-Rain/Day/Rain_day_2.avif", "Foad Roshan", "https://unsplash.com/photos/water-droplets-on-glass-panel-jrp-tFVFn0s"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_3.avif", "Noah Silliman", "https://unsplash.com/photos/water-drops-on-glass-i2J9jnvaAbU"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_4.avif", "Mihály Köles", "https://unsplash.com/photos/green-grass-field-during-daytime-Pr74utIXahM"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_5.avif", "J F", "https://unsplash.com/photos/a-view-of-a-mountain-range-from-a-distance-sb8jpOmJX1s"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_6.avif", "Kristaps Grundsteins", "https://unsplash.com/photos/a-view-of-a-road-through-a-rain-covered-window-fAY23t1iA40"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_7.avif", "Alex Sukhanov", "https://unsplash.com/photos/green-grass-field-on-mountain-under-blue-sky-during-daytime-CqJUTrkLkr4"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_8.avif", "Shutter Verse", "https://unsplash.com/photos/a-rain-soaked-window-with-trees-in-the-background-AuTZAjMj6Lg"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_9.avif", "Behnam Mohsenzadeh", "https://unsplash.com/photos/a-green-hilly-landscape-Yj4BMY6wxJU"],
+        ["/IMG/Back/5-Rain/Day/Rain_day_10.avif", "Nikolay Werner", "https://unsplash.com/photos/a-grassy-hill-with-a-road-jzAW8nffnCI"]],
     "Night" : [
-        ["/IMG/Back/5-Rain/Night/Rain_night_1.jpg", "yapo zhou", "https://unsplash.com/photos/a-window-with-rain-falling-down-on-it-m24i99jzmDs"],
-        ["/IMG/Back/5-Rain/Night/Rain_night_3.jpg", "Ritvik Singh", "https://unsplash.com/photos/green-mountain-under-white-clouds-bzdWdRcVnao"],
-        ["/IMG/Back/5-Rain/Night/Rain_night_4.jpg", "Miroslav Škopek", "https://unsplash.com/photos/a-dark-blue-sky-with-clouds-and-trees-qWbgKrLOEkg"]]};
+        ["/IMG/Back/5-Rain/Night/Rain_night_1.avif", "yapo zhou", "https://unsplash.com/photos/a-window-with-rain-falling-down-on-it-m24i99jzmDs"],
+        ["/IMG/Back/5-Rain/Night/Rain_night_3.avif", "Ritvik Singh", "https://unsplash.com/photos/green-mountain-under-white-clouds-bzdWdRcVnao"],
+        ["/IMG/Back/5-Rain/Night/Rain_night_4.avif", "Miroslav Škopek", "https://unsplash.com/photos/a-dark-blue-sky-with-clouds-and-trees-qWbgKrLOEkg"]]};
 
 
 // Snow background photos - location / author / link
 ///////////////////////////////////////////////////////////////////////////////////////
 const SnowPhotos = {
     "Day" : [
-        ["/IMG/Back/6-Snow/Day/Snow_day_1.jpg", "Alberto Restifo", "https://unsplash.com/photos/ground-covered-with-snow-cFplR9ZGnAk"],
-        ["/IMG/Back/6-Snow/Day/Snow_day_2.jpg", "Chris Biron", "https://unsplash.com/photos/snowy-mountain-JVtcrWcbj1c"],
-        ["/IMG/Back/6-Snow/Day/Snow_day_3.jpg", "Fabrizio Conti", "https://unsplash.com/photos/photo-of-clouds-Mbm0WnJ5emc"],
-        ["/IMG/Back/6-Snow/Day/Snow_day_4.jpg", "Pascal Debrunner", "https://unsplash.com/photos/a-snow-covered-forest-filled-with-lots-of-trees-306LC_hn9qc"],
-        ["/IMG/Back/6-Snow/Day/Snow_day_5.jpg", "Lucian", "https://unsplash.com/photos/snow-covered-mountain-during-daytime-v_mTgSs6UiY"],
-        ["/IMG/Back/6-Snow/Day/Snow_day_6.jpg", "Stijn Verplancke", "https://unsplash.com/photos/trees-covered-with-snow-tsStT0oQhY8"]],
+        ["/IMG/Back/6-Snow/Day/Snow_day_1.avif", "Alberto Restifo", "https://unsplash.com/photos/ground-covered-with-snow-cFplR9ZGnAk"],
+        ["/IMG/Back/6-Snow/Day/Snow_day_2.avif", "Chris Biron", "https://unsplash.com/photos/snowy-mountain-JVtcrWcbj1c"],
+        ["/IMG/Back/6-Snow/Day/Snow_day_3.avif", "Fabrizio Conti", "https://unsplash.com/photos/photo-of-clouds-Mbm0WnJ5emc"],
+        ["/IMG/Back/6-Snow/Day/Snow_day_4.avif", "Pascal Debrunner", "https://unsplash.com/photos/a-snow-covered-forest-filled-with-lots-of-trees-306LC_hn9qc"],
+        ["/IMG/Back/6-Snow/Day/Snow_day_5.avif", "Lucian", "https://unsplash.com/photos/snow-covered-mountain-during-daytime-v_mTgSs6UiY"],
+        ["/IMG/Back/6-Snow/Day/Snow_day_6.avif", "Stijn Verplancke", "https://unsplash.com/photos/trees-covered-with-snow-tsStT0oQhY8"]],
     "Night" : [
-        ["/IMG/Back/6-Snow/Night/Snow_night_1.jpg", "", ""],
-        ["/IMG/Back/6-Snow/Night/Snow_night_2.jpg", "Geetangey", "https://unsplash.com/photos/snow-capped-mountains-glow-under-the-suns-first-light-3YfjMj93Ljs"],
-        ["/IMG/Back/6-Snow/Night/Snow_night_3.jpg", "Luke Paris", "https://unsplash.com/photos/black-and-white-bed-sheet-7FMNsEWrlos"]]};
+        ["/IMG/Back/6-Snow/Night/Snow_night_1.avif", "", ""],
+        ["/IMG/Back/6-Snow/Night/Snow_night_2.avif", "Geetangey", "https://unsplash.com/photos/snow-capped-mountains-glow-under-the-suns-first-light-3YfjMj93Ljs"],
+        ["/IMG/Back/6-Snow/Night/Snow_night_3.avif", "Luke Paris", "https://unsplash.com/photos/black-and-white-bed-sheet-7FMNsEWrlos"]]};
 
 
 // Atmosphere background photos - location / author / link
 ///////////////////////////////////////////////////////////////////////////////////////
 const AtmospherePhotos = {
     "Day" : [
-        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_1.jpg", "Pascal Debrunner", "https://unsplash.com/photos/a-mountain-covered-in-fog-with-trees-in-the-background-JiplrgrRtgI"],
-        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_2.jpg", "Pascal Debrunner", "https://unsplash.com/photos/a-view-of-a-mountain-range-from-a-distance-uBVe_XzJscM"],
-        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_3.jpg", "Paul Pastourmatzis", "https://unsplash.com/photos/silhouette-of-trees-covered-by-fog-KT3WlrL_bsg"],
-        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_4.jpg", "Tai Jyun Chang", "https://unsplash.com/photos/mountains-covered-with-fogs-580TcQCVJ_4"],
-        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_5.jpg", "Fabrizio Conti", "https://unsplash.com/photos/aerial-photography-of-mountains-k6GpdsPJSZw"]],
+        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_1.avif", "Pascal Debrunner", "https://unsplash.com/photos/a-mountain-covered-in-fog-with-trees-in-the-background-JiplrgrRtgI"],
+        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_2.avif", "Pascal Debrunner", "https://unsplash.com/photos/a-view-of-a-mountain-range-from-a-distance-uBVe_XzJscM"],
+        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_3.avif", "Paul Pastourmatzis", "https://unsplash.com/photos/silhouette-of-trees-covered-by-fog-KT3WlrL_bsg"],
+        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_4.avif", "Tai Jyun Chang", "https://unsplash.com/photos/mountains-covered-with-fogs-580TcQCVJ_4"],
+        ["/IMG/Back/7-Atmosphere/Day/Atmos_day_5.avif", "Fabrizio Conti", "https://unsplash.com/photos/aerial-photography-of-mountains-k6GpdsPJSZw"]],
     "Night" : [
-        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_1.jpg", "Pascal Debrunner", "https://unsplash.com/photos/mountain-covered-with-fog-at-daytime-bOr1ym-36tw"],
-        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_2.jpg", "Pascal Debrunner", "https://unsplash.com/photos/a-flock-of-birds-flying-over-a-foggy-forest-TnL2a9hoDvI"],
-        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_3.jpg", "Mohammad Alizade", "https://unsplash.com/photos/view-of-mountains-during-golden-hour-CDu0x1Aiils"],
-        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_4.jpg", "Ash Edmonds", "https://unsplash.com/photos/landscape-photography-of-mountains-v0Qujn-zHJk"]]};
+        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_1.avif", "Pascal Debrunner", "https://unsplash.com/photos/mountain-covered-with-fog-at-daytime-bOr1ym-36tw"],
+        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_2.avif", "Pascal Debrunner", "https://unsplash.com/photos/a-flock-of-birds-flying-over-a-foggy-forest-TnL2a9hoDvI"],
+        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_3.avif", "Mohammad Alizade", "https://unsplash.com/photos/view-of-mountains-during-golden-hour-CDu0x1Aiils"],
+        ["/IMG/Back/7-Atmosphere/Night/Atmos_night_4.avif", "Ash Edmonds", "https://unsplash.com/photos/landscape-photography-of-mountains-v0Qujn-zHJk"]]};
 
 
 // Clear background photos - location / author / link
 ///////////////////////////////////////////////////////////////////////////////////////
 const ClearPhotos = {
     "Day" : [
-        ["/IMG/Back/8-Clear/Day/Clear_day_0.jpg", "Jānis Beitiņš", "https://unsplash.com/photos/green-grass-field-under-blue-sky-during-daytime-FTDfoEWqHqs"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_1.jpg", "AV Media", "https://unsplash.com/photos/a-large-group-of-sand-dunes-under-a-blue-sky-yBuqz-6swl4"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_2.jpg", "Cole Ciarlello", "https://unsplash.com/photos/a-large-field-of-grass-with-a-mountain-in-the-background-uPcGH87EW6k"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_3.jpg", "Henrique Malaguti", "https://unsplash.com/photos/green-grass-field-under-blue-sky-during-daytime-4hD_35bxHSU"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_4.jpg", "FloatFlower Huang", "https://unsplash.com/photos/a-green-mountain-with-a-blue-sky-in-the-background-SU9IO8KoHlA"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_5.jpg", "Jenelle", "https://unsplash.com/photos/hay-stocks-on-grassland-_6YXOv-l7AI"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_6.jpg", "Pascal Debrunner", "https://unsplash.com/photos/a-boat-is-on-the-water-in-front-of-a-mountain-Rjh78If2DNQ"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_7.jpg", "Umut YILMAN", "https://unsplash.com/photos/blue-body-of-water-a5lowPMcf70"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_8.jpg", "Charles MingZ", "https://unsplash.com/photos/a-grassy-field-with-mountains-in-the-distance-wxAYDCi2G-4"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_9.jpg", "Spencer DeMera", "https://unsplash.com/photos/rolling-green-hills-under-a-clear-blue-sky-dYhqxyxQIN4"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_10.jpg", "David Thielen", "https://unsplash.com/photos/brown-wooden-fence-on-green-grass-field-under-blue-sky-and-white-clouds-during-daytime-z6oauD8K52Q"],
-        ["/IMG/Back/8-Clear/Day/Clear_day_9.jpg", "Anna Mircea", "https://unsplash.com/photos/a-wide-open-field-with-a-dirt-road-running-through-it-jhP9c_mpkRI"]],
+        ["/IMG/Back/8-Clear/Day/Clear_day_0.avif", "Jānis Beitiņš", "https://unsplash.com/photos/green-grass-field-under-blue-sky-during-daytime-FTDfoEWqHqs"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_1.avif", "AV Media", "https://unsplash.com/photos/a-large-group-of-sand-dunes-under-a-blue-sky-yBuqz-6swl4"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_2.avif", "Cole Ciarlello", "https://unsplash.com/photos/a-large-field-of-grass-with-a-mountain-in-the-background-uPcGH87EW6k"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_3.avif", "Henrique Malaguti", "https://unsplash.com/photos/green-grass-field-under-blue-sky-during-daytime-4hD_35bxHSU"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_4.avif", "FloatFlower Huang", "https://unsplash.com/photos/a-green-mountain-with-a-blue-sky-in-the-background-SU9IO8KoHlA"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_5.avif", "Jenelle", "https://unsplash.com/photos/hay-stocks-on-grassland-_6YXOv-l7AI"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_6.avif", "Pascal Debrunner", "https://unsplash.com/photos/a-boat-is-on-the-water-in-front-of-a-mountain-Rjh78If2DNQ"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_7.avif", "Umut YILMAN", "https://unsplash.com/photos/blue-body-of-water-a5lowPMcf70"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_8.avif", "Charles MingZ", "https://unsplash.com/photos/a-grassy-field-with-mountains-in-the-distance-wxAYDCi2G-4"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_9.avif", "Spencer DeMera", "https://unsplash.com/photos/rolling-green-hills-under-a-clear-blue-sky-dYhqxyxQIN4"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_10.avif", "David Thielen", "https://unsplash.com/photos/brown-wooden-fence-on-green-grass-field-under-blue-sky-and-white-clouds-during-daytime-z6oauD8K52Q"],
+        ["/IMG/Back/8-Clear/Day/Clear_day_9.avif", "Anna Mircea", "https://unsplash.com/photos/a-wide-open-field-with-a-dirt-road-running-through-it-jhP9c_mpkRI"]],
     "Night" : [
-        ["/IMG/Back/8-Clear/Night/Clear_night_1.jpg", "Ashwini Chaudhary", "https://unsplash.com/photos/the-night-sky-with-stars-above-a-mountain-range-MDJTh4-gJH4"],
-        ["/IMG/Back/8-Clear/Night/Clear_night_2.jpg", "Fabrizio Conti", "https://unsplash.com/photos/blue-sky-c3wsMnxQZDw"],
-        ["/IMG/Back/8-Clear/Night/Clear_night_3.jpg", "Nidheesh Kavalan", "https://unsplash.com/photos/silhouette-of-mountains-under-blue-sky-Ha501MB_XE8"]]};
+        ["/IMG/Back/8-Clear/Night/Clear_night_1.avif", "Ashwini Chaudhary", "https://unsplash.com/photos/the-night-sky-with-stars-above-a-mountain-range-MDJTh4-gJH4"],
+        ["/IMG/Back/8-Clear/Night/Clear_night_2.avif", "Fabrizio Conti", "https://unsplash.com/photos/blue-sky-c3wsMnxQZDw"],
+        ["/IMG/Back/8-Clear/Night/Clear_night_3.avif", "Nidheesh Kavalan", "https://unsplash.com/photos/silhouette-of-mountains-under-blue-sky-Ha501MB_XE8"]]};
 
 
 // Clouds background photos - location / author / link
 ///////////////////////////////////////////////////////////////////////////////////////
 const CloudsPhotos = {
     "Day" : [
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_1.jpg", "Artem Anokhin", "https://unsplash.com/photos/photo-of-white-clouds-V4qjYCac7y8"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_2.jpg", "Carl Kho", "https://unsplash.com/photos/a-plane-flying-in-the-sky-with-a-lot-of-clouds-wFnfMj02BRs"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_3.jpg", "Fabrizio Conti", "https://unsplash.com/photos/white-clouds-zbzD6fhTugQ"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_4.jpg", "Marc Wieland", "https://unsplash.com/photos/cloud-photo-zrj-TPjcRLA"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_5.jpg", "Pascal Debrunner", "https://unsplash.com/photos/a-view-of-a-mountain-covered-in-clouds-7_Fn67QFPOg"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_6.jpg", "Sourabh Adhya", "https://unsplash.com/photos/a-scenic-view-of-the-ocean-from-the-top-of-a-mountain-NA2vas9R8To"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_7.jpg", "Adriel Kloppenburg", "https://unsplash.com/photos/green-grass-field-and-mountain-at-distance-en-5xoYnjTE"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_8.jpg", "Erik Mclean", "https://unsplash.com/photos/white-cloudy-sky-during-daytime-CKJYAcSc3WE"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_9.jpg", "Maccy", "https://unsplash.com/photos/a-view-of-the-sky-and-clouds-from-an-airplane-_F4MzL_cI8E"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_10.jpg", "Rodion Kutsaiev", "https://unsplash.com/photos/grass-field-at-daytime-PEm_sLmJT-w"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_11.jpg", "Oleg Mitiukhin", "https://unsplash.com/photos/white-clouds-and-blue-sky-during-daytime-2gJa-AUtAOc"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_12.jpg", "Adrian Jakob", "https://unsplash.com/photos/yellow-petaled-flowers-on-green-hilltop-during-daytime-zqB_CKAjUNc"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_13.jpg", "Vas Soshnikov", "https://unsplash.com/photos/green-grass-field-under-white-clouds-during-daytime-64TxHHoBwSo"],
-        ["/IMG/Back/9-Clouds/Day/Clouds_day_14.jpg", "Michelle Spollen", "https://unsplash.com/photos/island-surround-by-green-sea-under-cloudy-sky-dC2FsjoXsPQ"]],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_1.avif", "Artem Anokhin", "https://unsplash.com/photos/photo-of-white-clouds-V4qjYCac7y8"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_2.avif", "Carl Kho", "https://unsplash.com/photos/a-plane-flying-in-the-sky-with-a-lot-of-clouds-wFnfMj02BRs"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_3.avif", "Fabrizio Conti", "https://unsplash.com/photos/white-clouds-zbzD6fhTugQ"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_4.avif", "Marc Wieland", "https://unsplash.com/photos/cloud-photo-zrj-TPjcRLA"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_5.avif", "Pascal Debrunner", "https://unsplash.com/photos/a-view-of-a-mountain-covered-in-clouds-7_Fn67QFPOg"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_6.avif", "Sourabh Adhya", "https://unsplash.com/photos/a-scenic-view-of-the-ocean-from-the-top-of-a-mountain-NA2vas9R8To"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_7.avif", "Adriel Kloppenburg", "https://unsplash.com/photos/green-grass-field-and-mountain-at-distance-en-5xoYnjTE"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_8.avif", "Erik Mclean", "https://unsplash.com/photos/white-cloudy-sky-during-daytime-CKJYAcSc3WE"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_9.avif", "Maccy", "https://unsplash.com/photos/a-view-of-the-sky-and-clouds-from-an-airplane-_F4MzL_cI8E"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_10.avif", "Rodion Kutsaiev", "https://unsplash.com/photos/grass-field-at-daytime-PEm_sLmJT-w"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_11.avif", "Oleg Mitiukhin", "https://unsplash.com/photos/white-clouds-and-blue-sky-during-daytime-2gJa-AUtAOc"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_12.avif", "Adrian Jakob", "https://unsplash.com/photos/yellow-petaled-flowers-on-green-hilltop-during-daytime-zqB_CKAjUNc"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_13.avif", "Vas Soshnikov", "https://unsplash.com/photos/green-grass-field-under-white-clouds-during-daytime-64TxHHoBwSo"],
+        ["/IMG/Back/9-Clouds/Day/Clouds_day_14.avif", "Michelle Spollen", "https://unsplash.com/photos/island-surround-by-green-sea-under-cloudy-sky-dC2FsjoXsPQ"]],
     "Night" : [
-        ["/IMG/Back/9-Clouds/night/Clouds_night_1.jpg", "Andriyko Podilnyk", "https://unsplash.com/photos/silhouette-photography-of-mountain-E6ne6IUNxZw"],
-        ["/IMG/Back/9-Clouds/night/Clouds_night_2.jpg", "CHUTTERSNAP", "https://unsplash.com/photos/gray-clouds-rk2s0sm8xF4"]]};
+        ["/IMG/Back/9-Clouds/night/Clouds_night_1.avif", "Andriyko Podilnyk", "https://unsplash.com/photos/silhouette-photography-of-mountain-E6ne6IUNxZw"],
+        ["/IMG/Back/9-Clouds/night/Clouds_night_2.avif", "CHUTTERSNAP", "https://unsplash.com/photos/gray-clouds-rk2s0sm8xF4"]]};
