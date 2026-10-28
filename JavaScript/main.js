@@ -1549,5 +1549,5 @@ const CloudsPhotos = {
         ["/IMG/Back/9-Clouds/Day/Clouds_day_13.avif", "Vas Soshnikov", "https://unsplash.com/photos/green-grass-field-under-white-clouds-during-daytime-64TxHHoBwSo"],
         ["/IMG/Back/9-Clouds/Day/Clouds_day_14.avif", "Michelle Spollen", "https://unsplash.com/photos/island-surround-by-green-sea-under-cloudy-sky-dC2FsjoXsPQ"]],
     "Night" : [
-        ["/IMG/Back/9-Clouds/night/Clouds_night_1.avif", "Andriyko Podilnyk", "https://unsplash.com/photos/silhouette-photography-of-mountain-E6ne6IUNxZw"],
-        ["/IMG/Back/9-Clouds/night/Clouds_night_2.avif", "CHUTTERSNAP", "https://unsplash.com/photos/gray-clouds-rk2s0sm8xF4"]]};
+        ["/IMG/Back/9-Clouds/Night/Clouds_night_1.avif", "Andriyko Podilnyk", "https://unsplash.com/photos/silhouette-photography-of-mountain-E6ne6IUNxZw"],
+        ["/IMG/Back/9-Clouds/Night/Clouds_night_2.avif", "CHUTTERSNAP", "https://unsplash.com/photos/gray-clouds-rk2s0sm8xF4"]]};
