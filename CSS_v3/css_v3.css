@@ -1,10 +1,17 @@
+@font-face {
+  font-family: "Trebuchet99";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../Fonts/TrebuchetW99Regular/TrebuchetW99Regular.woff2") format("woff2");
+}
 /*Desktop resolution 1920 x 1080 */
 body {
     background-image: 
     url("/IMG/Back/8-Clear/Day/Clear_day_6.avif");
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Trebuchet MS';
+    font-family: 'Trebuchet99';
     transition-duration: 2s;
     transition-delay: 0.5s;
     background-size: cover;
@@ -1274,6 +1281,7 @@ p, h2 {
         grid-column-end: 1;
         grid-row-start: 1;
         grid-row-end: 1;
+        height: 416px;
     }
     .mainCityTable {
         font-size: 18px;
@@ -1295,7 +1303,7 @@ p, h2 {
         grid-row-end: 6;
         column-gap: 32px;
         row-gap: 32px;
-        /*height: 416px;*/
+        height: 416px;
         display: grid;
     }
     #N-1-Temp, #N-2-Temp, #N-3-Temp, #N-4-Temp {
@@ -1313,6 +1321,7 @@ p, h2 {
         grid-row-end: 3;
         column-gap: 32px;
         row-gap: 16px;
+        height: 416px;
     }
     .dailyDate {
         font-size: 22px;
@@ -1338,7 +1347,7 @@ p, h2 {
         grid-row-start: 2;
         grid-row-end: 2;
         overflow-x: clip;
-        /*height: 416px;*/
+        height: 416px;
         width: 103%;
         cursor: grab;
     }
@@ -1347,7 +1356,7 @@ p, h2 {
         pointer-events: none;
         position: relative;
         column-gap: 16px;
-        /*height: 416px;*/
+        height: 416px;
         width: 317%;
         cursor: grab;
     }
@@ -1367,7 +1376,7 @@ p, h2 {
         grid-column-end: 1;
         grid-row-start: 4;
         grid-row-end: 4;
-        /*height: 416px;*/
+        height: 416px;
     }
 /*////////////////////////  NearbyCity \\\\\\\\\\\\\\\\\\\\\\\\\*\
 \*\\\\\\\\\\\\\\\\\\\\\\\\     w720    /////////////////////////*/
@@ -1376,7 +1385,7 @@ p, h2 {
         grid-column-end: 2;
         grid-row-start: 5;
         grid-row-end: 5;
-        /*height: 416px;*/
+        height: 416px;
     }
     .insideCookie {
         width: 95%;
@@ -1411,172 +1420,3 @@ p, h2 {
         overflow-x: scroll;
     }
 }
-/*.mainChatDiv {
-    background-color: rgba(0, 255, 255, 0.338);
-    position: absolute;
-    display: none;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-.chatStickyIcon {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.55);
-    border: 4px solid rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50px 50px 0px 50px;
-    grid-template-rows: 1fr 10fr 3fr;
-    margin-left: calc(100vw - 170px);
-    margin-top: calc(100vh - 150px);
-    backdrop-filter: blur(5px);
-    transition-duration: 0.5s;
-    position: absolute;
-    cursor: pointer;
-    display: grid;
-    height: 120px;
-    width: 150px;
-    z-index: 1;
-}
-.chatTitle {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    grid-template-columns: 3fr 9fr 2fr;
-    border-radius: 6px 6px 0px 0px;
-    padding-bottom: 4px;
-    cursor: auto;
-}
-.logoChat {
-    line-height: 10px;
-    margin-top: 12px;
-    font-size: 44px;
-    cursor: auto;
-}
-.nameChat {
-    justify-content: justify;
-    font-family: 'Segoe UI';
-    align-items: center;
-    font-size: 24px;
-    display: flex;
-    cursor: auto;
-}
-.closeChat {
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.3);
-    color: rgba(255, 255, 255, 0.6);
-    transition-duration: 0.1s;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    margin: 4px;
-}
-.closeChat:hover {
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.9);
-}
-.closeChat:active {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: scale3d(0.85, 0.85, 0.85);
-}
-.chatScrollArea {
-    background-color: rgba(255, 255, 255, 0.2);
-    scrollbar-color: red;
-    overflow-y: scroll;
-    cursor: auto;
-}
-.scrollAreaShadow {
-    box-shadow: inset 8px 8px 16px rgba(0, 0, 0, 0.8);
-    pointer-events: none;
-    position: absolute;
-    height: 393px;
-    width: 100%;
-}
-.userMessage {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 24px 24px 0px 24px;
-    margin: 8px 8px 8px auto;
-    font-family: 'Segoe UI';
-    padding: 8px 16px;
-    color: white;
-    height: auto;
-    width: 70%;
-}
-.cloudMessage {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 0px 24px 24px 24px;
-    margin: 8px auto 8px 8px;
-    font-family: 'Segoe UI';
-    padding: 8px 16px;
-    height: auto;
-    color: black;
-    width: 70%;
-}
-.seenMessage {
-    color: rgba(255, 255, 255, 0.7);
-    margin: -8px 24px 8px auto;
-    font-family: 'Segoe UI';
-    text-align: right;
-    height: auto;
-    width: 30%;
-}
-.chatTextArea {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0px 0px 0px 6px;
-    grid-template-columns: 4fr 1fr;
-    display: grid;
-    cursor: auto;
-}
-.textChat {
-    padding: 24px 8px 24px 16px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.textChat textarea {
-    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.7);
-    background-color: rgba(255, 255, 255, 0.1);
-    font-family: 'Segoe UI';
-    border-radius: 10px;
-    font-size: 18px;
-    height: 100%;
-    color: white;
-    padding: 8px;
-    width: 100%;
-}
-.textChat textarea:focus {
-    outline: 1px solid rgba(255, 255, 255, 0.6);
-}
-.chatButon {
-    padding: 16px 16px 16px 8px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.chatSendBtn {
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
-    transition-duration: 0.1s;
-    justify-content: center;
-    border-radius: 10px;
-    font-size: 32px;
-    cursor: pointer;
-    display: flex;
-    width: 100%;
-    height: 50%;
-}
-.chatSendBtn p {
-    margin-top: -2px;
-}
-.chatSendBtn:hover {
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.9);
-}
-.chatSendBtn:active {
-background-color: rgba(255, 255, 255, 0.1);
-    transform: scale3d(0.85, 0.85, 0.85);
-}
-.chatTitle, .chatScrollArea, .chatTextArea{
-    display: none;
-}*/
