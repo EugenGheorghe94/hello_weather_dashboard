@@ -1,9 +1,16 @@
+@font-face {
+  font-family: "Trebuchet99";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../Fonts/TrebuchetW99Regular/TrebuchetW99Regular.woff2") format("woff2");
+}
 body {
     background-image: 
     url("/IMG/Back/8-Clear/Day/Clear_day_6.avif");
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Trebuchet MS';
+    font-family: 'Trebuchet99';
     transition-duration: 2s;
     transition-delay: 0.5s;
     background-size: cover;
