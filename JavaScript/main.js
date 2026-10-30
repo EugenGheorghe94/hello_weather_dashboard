@@ -145,14 +145,14 @@ let pressed = false;
 let startX;
 let x;
 
-document.getElementById("HourlyContainer").addEventListener("mousedown", (e) => {
+document.getElementById("HourlyContainer").addEventListener("pointerdown", (e) => {
     pressed = true;
     startX = e.offsetX - document.getElementById("InnerContainer").offsetLeft;
     document.getElementById("HourlyContainer").style.cursor = "grabbing";});
-document.getElementById("HourlyContainer").addEventListener("mouseup", () => {
+document.getElementById("HourlyContainer").addEventListener("pointerup", () => {
     document.getElementById("HourlyContainer").style.cursor = "grab";
     pressed = false;});
-document.getElementById("HourlyContainer").addEventListener("mousemove", (e) => {
+document.getElementById("HourlyContainer").addEventListener("pointermove", (e) => {
     if (!pressed) return;
     e.preventDefault();
     x = e.offsetX;
@@ -165,7 +165,7 @@ let boundItems = () => {
         document.getElementById("InnerContainer").style.left = "0px";};
     if (inner.right < outer.right) {
         document.getElementById("InnerContainer").style.left = `-${inner.width - outer.width}px`;};};
-document.getElementById("HourlyContainer").addEventListener("mousemove", (e) => {
+document.getElementById("HourlyContainer").addEventListener("pointermove", (e) => {
     if (!pressed) return;
     e.preventDefault();
     x = e.offsetX;
