@@ -4,8 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            var shortSide = Math.min(screen.width, screen.height);
+            var longSide  = Math.max(screen.width, screen.height);
+            var PHONE_W  = 700;
+            var TABLET_W = 1100;
+            var target = null;
+
+            if (shortSide < 600) {
+            target = PHONE_W;
+            } else if (shortSide < TABLET_W) {
+            target = TABLET_W;
+            }
+
+            if (target) {
+            document.querySelector('meta[name=viewport]')
+                .setAttribute('content', 'width=' + target);
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="/CSS_v3/css_v3.css">
     <link rel="shortcut icon" href="/Logos/favi17k.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/03bc53eee8.js" crossorigin="anonymous"></script>
     <title>HelloWeather - Instant Weather Report</title>
 </head>
 
@@ -50,7 +71,9 @@
                 <div id="searchButtonID" class="searchButon searchButoActive">
                     <div id="searchBtnDiv" class="searchDiv"></div>
                     <div id="searchBtnDiv2" class="searchDiv2">
-                        <p id="mapButtonText" class="mapButton" >🗺</p>
+                        <p id="mapButtonText" class="mapButton">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -78,10 +101,14 @@
                 <div id="navTheme" class="navTheme">
                     <div id="button-Area" class="buttonArea">
                         <div id="light-Area" class="lightArea">
-                            <p id="lightBtnText">☀︎</p>
+                            <p id="lightBtnText">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                            </p>
                         </div>
                         <div id="dark-Area" class="darkArea">
-                            <p id="darkBtnText">☽</p>
+                            <p id="darkBtnText">
+                                <i class="fa-solid fa-cloud-moon"></i>
+                            </p>
                         </div>
                     </div>
                     <div id="lightBack" class="themeLight"></div>
