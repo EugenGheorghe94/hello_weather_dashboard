@@ -173,6 +173,7 @@ document.getElementById("HourlyContainer").addEventListener("pointermove", (e) =
     `${x - startX - document.getElementById("HourlyContainer").offsetLeft}px`;
     boundItems();});
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Search Input Submit
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -184,6 +185,10 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
     sessionStorage.city = (`${city}`);
     if (city.length != 0) {
 
+        
+        // initial user click -> loading state here
+        document.getElementById("loadingBar").classList.add('loadingAnimation');
+
 
         // Get user input geo-location
         ////////////////////////////////////////////////////////////////////////////////////////
@@ -191,25 +196,15 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
             (`${API_BASE}/geo/1.0/direct?q=${city}&limit=1`);
         const { 0: { name: NAME, lat: LAT, lon: LON, country: LANG } } = await response.json();
 
-
-        // If city name is already searched
-        ////////////////////////////////////////////////////////////////////////////////////////
-        if (NAME.toUpperCase() == "BUCHAREST") { document.getElementById("mainInputCityName").textContent = "BUCURESTI";}
-        else { document.getElementById("mainInputCityName").textContent = NAME.toUpperCase();};
-        
-
-        console.log("\n\n\n✅ Fetching data...\n\n")
-        console.log(`🏙️ Main city: ${city.toUpperCase()}\n`)
-        console.log(`➡️ Latitude: ${LAT}`);
-        console.log(`⬇️ Longitude: ${LON}\n\n`);
-        console.log("🏘️ Nearby cities:")
+        const req1 = fetch(`${API_BASE}/data/2.5/weather?lat=${LAT + rng}&lon=${LON + rng}&units=${sessionStorage.Units}`);
+        const req2 = fetch(`${API_BASE}/data/2.5/weather?lat=${LAT + rng}&lon=${LON - rng}&units=${sessionStorage.Units}`);
+        const req3 = fetch(`${API_BASE}/data/2.5/weather?lat=${LAT - rng}&lon=${LON + rng}&units=${sessionStorage.Units}`);
+        const req4 = fetch(`${API_BASE}/data/2.5/weather?lat=${LAT - rng}&lon=${LON - rng}&units=${sessionStorage.Units}`);
         
 
         // Add Windy map location based on user searched city
         ////////////////////////////////////////////////////////////////////////////////////////
         document.getElementById("userInputCity").value = "";
-        document.getElementById("WindyMap").src =
-            (`https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=${sessionStorage.Rain}&metricTemp=${sessionStorage.Temp}&metricWind=${sessionStorage.Wind}&zoom=7&overlay=temp&product=ecmwf&level=surface&lat=${LAT}&lon=${LON}&pressure=true&message=true`);
 
 
         // To database ( WebDesc / WebIcon / BackPhotos )
@@ -235,8 +230,7 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
     
         // Nearby city 1
         ////////////////////////////////////////////////////////////////////////////////////////
-        const nearbyCities1 = await fetch
-            (`${API_BASE}/data/2.5/weather?lat=${LAT + rng}&lon=${LON + rng}&units=${sessionStorage.Units}`);
+        const nearbyCities1 = await req1;
         const {
             name: N_1_Name,
             main: { humidity: N_1_HumiNo, temp: N_1_Temp, temp_max: N_1_MaxTemp, temp_min: N_1_MinTemp },
@@ -253,13 +247,11 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
                 (((toDatabase[N_1_Icon])[1]))[((toDatabase[N_1_Icon])[0])[N_1_Desc]];
         windDescription(N_1_WindDeg, "N-1-WindDesc");
         humidityDescription(N_1_HumiNo, "N-1-HumiDesc");
-        console.log(N_1_Name);
 
 
         // Nearby city 2
         ////////////////////////////////////////////////////////////////////////////////////////
-        const nearbyCities2 = await fetch
-            (`${API_BASE}/data/2.5/weather?lat=${LAT + rng}&lon=${LON - rng}&units=${sessionStorage.Units}`);
+        const nearbyCities2 = await req2;
         const {
             name: N_2_Name,
             main: { humidity: N_2_HumiNo, temp: N_2_Temp, temp_max: N_2_MaxTemp, temp_min: N_2_MinTemp },
@@ -276,13 +268,11 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
                 (((toDatabase[N_2_Icon])[1]))[((toDatabase[N_2_Icon])[0])[N_2_Desc]];
         windDescription(N_2_WindDeg, "N-2-WindDesc");
         humidityDescription(N_2_HumiNo, "N-2-HumiDesc");
-        console.log(N_2_Name);
 
 
         // Nearby city 3
         ////////////////////////////////////////////////////////////////////////////////////////
-        const nearbyCities3 = await fetch
-            (`${API_BASE}/data/2.5/weather?lat=${LAT - rng}&lon=${LON + rng}&units=${sessionStorage.Units}`);
+        const nearbyCities3 = await req3;
         const {
             name: N_3_Name,
             main: { humidity: N_3_HumiNo, temp: N_3_Temp, temp_max: N_3_MaxTemp, temp_min: N_3_MinTemp },
@@ -299,13 +289,11 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
                 (((toDatabase[N_3_Icon])[1]))[((toDatabase[N_3_Icon])[0])[N_3_Desc]];
         windDescription(N_3_WindDeg, "N-3-WindDesc");
         humidityDescription(N_3_HumiNo, "N-3-HumiDesc");
-        console.log(N_3_Name);
 
 
         // Nearby city 4
         ////////////////////////////////////////////////////////////////////////////////////////
-        const nearbyCities4 = await fetch
-            (`${API_BASE}/data/2.5/weather?lat=${LAT - rng}&lon=${LON - rng}&units=${sessionStorage.Units}`);
+        const nearbyCities4 = await req4;
         const {
             name: N_4_Name,
             main: { humidity: N_4_HumiNo, temp: N_4_Temp, temp_max: N_4_MaxTemp, temp_min: N_4_MinTemp },
@@ -322,13 +310,6 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
                 (((toDatabase[N_4_Icon])[1]))[((toDatabase[N_4_Icon])[0])[N_4_Desc]];
         windDescription(N_4_WindDeg, "N-4-WindDesc");
         humidityDescription(N_4_HumiNo, "N-4-HumiDesc");
-        console.log(N_4_Name);
-
-
-
-        console.log(`\n🗺️ Spread: +-${rng}° LAT/LON`);
-        console.log("\n")
-
 
 
         /*////////////////////////////////////  Main City \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*\
@@ -1020,6 +1001,21 @@ document.getElementById("searchBtnDiv2").addEventListener("click", async () => {
                 document.getElementById(notAllowed[i]).style.cursor = "not-allowed";};};
 
 
+    // If city name is already searched
+    if (NAME.toUpperCase() == "BUCHAREST") { document.getElementById("mainInputCityName").textContent = "BUCURESTI";}
+    else { document.getElementById("mainInputCityName").textContent = NAME.toUpperCase();};
+
+        
+    // Change Windy map
+    document.getElementById("WindyMap").src =
+        (`https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=${sessionStorage.Rain}&metricTemp=${sessionStorage.Temp}&metricWind=${sessionStorage.Wind}&zoom=7&overlay=temp&product=ecmwf&level=surface&lat=${LAT}&lon=${LON}&pressure=true&message=true`);
+
+
+    // Await then remove loading bar
+    await delay(800);
+    document.getElementById("loadingBar").classList.remove('loadingAnimation');
+
+        
     // Alert if no input is entered
     ////////////////////////////////////////////////////////////////////////////////////////
     } else { alert("Please enter a city name."); }; });
@@ -1072,56 +1068,6 @@ document.getElementById("nearCity4Search").addEventListener('click', nearCity4Se
 function nearCity4Search () {
     document.getElementById("userInputCity").value = document.getElementById("N-4-Name").textContent
     document.getElementById("searchBtnDiv2").click();};
-
-
-// CloudIA ai chatbot
-////////////////////////////////////////////////////////////////////////////////////////
-/*document.getElementById('chatStickyID').addEventListener('click', (e) => {
-    e.stopPropagation()
-    document.getElementById('chatStickyID').style.borderRadius = "10px 10px 0px 10px";
-    document.getElementById('chatStickyID').style.width = "350px";
-    document.getElementById('chatStickyID').style.height = "550px";
-    document.getElementById('chatStickyID').style.marginLeft = "calc(100vw - 370px)";
-    document.getElementById('chatStickyID').style.marginTop = "calc(100vh - 580px)";
-    document.getElementById('chatTitleID').style.display = "grid";
-    document.getElementById('chatScrollAreaID').style.display = "grid";
-    document.getElementById('chatTextAreaID').style.display = "grid";});
-
-document.getElementById('closeChatBtnID').addEventListener('click', (e) => {
-    e.stopPropagation()
-    setTimeout(()=>{
-        document.getElementById('chatStickyID').style.width = "150px";
-        document.getElementById('chatStickyID').style.height = "120px";
-        document.getElementById('chatTitleID').style.display = "none";
-        document.getElementById('chatScrollAreaID').style.display = "none";
-        document.getElementById('chatTextAreaID').style.display = "none";
-        document.getElementById('chatStickyID').style.borderRadius = "50px 50px 0px 50px";
-        document.getElementById('chatStickyID').style.marginLeft = "calc(100vw - 170px)";
-        document.getElementById('chatStickyID').style.marginTop = "calc(100vh - 150px)";},150);});
-
-document.getElementById('userText').addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {document.getElementById("chatButonID").click();};});
-
-document.getElementById('chatButonID').addEventListener('click', () => {
-    var userMessage = document.createElement('div');
-    var seenMessage = document.createElement('div');
-    userMessage.classList.add("userMessage");
-    seenMessage.classList.add("seenMessage");
-    userMessage.textContent = document.getElementById('userText').value;
-    seenMessage.textContent = "seen";
-    document.getElementById('userText').value = " ";
-    var parent = document.getElementById('chatScrollAreaID');
-    parent.appendChild(userMessage);
-    userMessage.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"});
-    setTimeout(()=>{
-        parent.appendChild(seenMessage);
-        seenMessage.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"});},(randint(5)+0.5)*1000);});*/
 
 
 /*////////////////////////////////////  Functions \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*\
