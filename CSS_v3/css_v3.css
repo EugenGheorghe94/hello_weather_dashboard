@@ -46,6 +46,8 @@ p, h2 {
 /*////////////////////////   NaviBar   \\\\\\\\\\\\\\\\\\\\\\\\\*\
 \*\\\\\\\\\\\\\\\\\\\\\\\\    w1920    /////////////////////////*/
 .navbarContainer {
+    position: relative;
+    overflow: hidden;
     grid-template-columns: repeat(3, 1fr);
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
@@ -56,6 +58,23 @@ p, h2 {
     display: grid;
     height: 74px;
     width: 90%;
+}
+#loadingBar {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 0px;
+    left: -100%;
+    display: none;
+}
+.loadingAnimation {
+    display: block !important;
+    animation-name: myAnimation;
+    animation-duration: 0.8s;
+}
+@keyframes myAnimation {
+    100% {translate: 100%;}
 }
 .navLogo {
     grid-column-start: 1;
