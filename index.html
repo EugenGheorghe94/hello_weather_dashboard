@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://weather-proxy.pluma-weather.workers.dev" crossorigin>
+    <link rel="preconnect" href="https://embed.windy.com">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive real time weather dashboard overview">
     <script>
         (function () {
             var shortSide = Math.min(screen.width, screen.height);
@@ -56,6 +59,7 @@
     <!--                               Nav-Bar                                -->
     <!-------------------------------------------------------------------------->
     <div class="navbarContainer semiTranspBlack">
+        <div id="loadingBar"></div>
         <div class="navLogo">
             <div class="navlogoimage">
                 <img id="bigLogo" src="/Logos/HelloWeather.svg" alt="">
@@ -121,7 +125,7 @@
     <!-------------------------------------------------------------------------->
     <!--                            Main Container                            -->
     <!-------------------------------------------------------------------------->
-    <div id="main-container-data" class="mainContainer">
+    <main id="main-container-data" class="mainContainer">
         <!-------------------------------------------------------------------------->
         <div id="mainCityContainer" class="semiTranspBlack mainCity">
             <!-------------------------------------------------------------------------->
@@ -133,7 +137,7 @@
                         <p id="main-Temp"><sup class="mainCityDegree">°</sup></p>
                     </div>
                     <div class="mainCityIcon">
-                        <img id="main-IconSvg" src="/IMG/cloudy.svg" alt="">
+                        <img id="main-IconSvg" src="/IMG/cloudy.svg" fetchpriority="high" alt="">
                     </div>
                     <div class="mainCityDescription">
                         <p id="main-Desc">Scattered Clouds</p>
@@ -1396,10 +1400,10 @@
             </div>
             <div class="mapiframe">
                 <div class="iframeShadow"></div>
-                <iframe id="WindyMap" class="map" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=7&overlay=temp&product=ecmwf&level=surface&lat=44.4361414&lon=26.1027202&pressure=true&message=true" frameborder="0"></iframe>
+                <iframe id="WindyMap" class="map" frameborder="0" title="windyInteractiveMap"></iframe>
             </div>
         </div>
-    </div>
+    </main>
     <!-------------------------------------------------------------------------->
     <!--                              Resources                               -->
     <!-------------------------------------------------------------------------->
